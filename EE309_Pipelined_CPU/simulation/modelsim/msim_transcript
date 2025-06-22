@@ -1,0 +1,272 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do Pipelined_CPU_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Digital Lab/EE309_Pipelined_CPU/ALU.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:33:18 on May 03,2025
+# vcom -reportprogress 300 -93 -work work C:/Digital Lab/EE309_Pipelined_CPU/ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ALU
+# -- Compiling architecture beh of ALU
+# End time: 23:33:19 on May 03,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Digital Lab/EE309_Pipelined_CPU/regfile.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:33:19 on May 03,2025
+# vcom -reportprogress 300 -93 -work work C:/Digital Lab/EE309_Pipelined_CPU/regfile.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity regfile
+# -- Compiling architecture sim of regfile
+# End time: 23:33:19 on May 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Digital Lab/EE309_Pipelined_CPU/regfile1.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:33:19 on May 03,2025
+# vcom -reportprogress 300 -93 -work work C:/Digital Lab/EE309_Pipelined_CPU/regfile1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity regfile1
+# -- Compiling architecture sim of regfile1
+# End time: 23:33:19 on May 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Digital Lab/EE309_Pipelined_CPU/stage1.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:33:19 on May 03,2025
+# vcom -reportprogress 300 -93 -work work C:/Digital Lab/EE309_Pipelined_CPU/stage1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity stage1
+# -- Compiling architecture sim of stage1
+# End time: 23:33:19 on May 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Digital Lab/EE309_Pipelined_CPU/stage2.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:33:19 on May 03,2025
+# vcom -reportprogress 300 -93 -work work C:/Digital Lab/EE309_Pipelined_CPU/stage2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity stage2
+# -- Compiling architecture sim of stage2
+# End time: 23:33:19 on May 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Digital Lab/EE309_Pipelined_CPU/stage3.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:33:19 on May 03,2025
+# vcom -reportprogress 300 -93 -work work C:/Digital Lab/EE309_Pipelined_CPU/stage3.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity stage3
+# -- Compiling architecture sim of stage3
+# End time: 23:33:19 on May 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Digital Lab/EE309_Pipelined_CPU/stage5.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:33:19 on May 03,2025
+# vcom -reportprogress 300 -93 -work work C:/Digital Lab/EE309_Pipelined_CPU/stage5.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity stage5
+# -- Compiling architecture str of stage5
+# End time: 23:33:19 on May 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Digital Lab/EE309_Pipelined_CPU/control.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:33:19 on May 03,2025
+# vcom -reportprogress 300 -93 -work work C:/Digital Lab/EE309_Pipelined_CPU/control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity control
+# -- Compiling architecture beh of control
+# End time: 23:33:20 on May 03,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Digital Lab/EE309_Pipelined_CPU/proc.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:33:20 on May 03,2025
+# vcom -reportprogress 300 -93 -work work C:/Digital Lab/EE309_Pipelined_CPU/proc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity proc
+# -- Compiling architecture rtl of proc
+# End time: 23:33:20 on May 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Digital Lab/EE309_Pipelined_CPU/mux2_1.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:33:20 on May 03,2025
+# vcom -reportprogress 300 -93 -work work C:/Digital Lab/EE309_Pipelined_CPU/mux2_1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux2_1
+# -- Compiling architecture dtf of mux2_1
+# End time: 23:33:20 on May 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Digital Lab/EE309_Pipelined_CPU/mux4_1.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:33:20 on May 03,2025
+# vcom -reportprogress 300 -93 -work work C:/Digital Lab/EE309_Pipelined_CPU/mux4_1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux4_1
+# -- Compiling architecture dtf of mux4_1
+# End time: 23:33:20 on May 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Digital Lab/EE309_Pipelined_CPU/sign_extend_16.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:33:20 on May 03,2025
+# vcom -reportprogress 300 -93 -work work C:/Digital Lab/EE309_Pipelined_CPU/sign_extend_16.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity sign_extend_16
+# -- Compiling architecture dtf of sign_extend_16
+# End time: 23:33:20 on May 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Digital Lab/EE309_Pipelined_CPU/ring_buffer.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:33:20 on May 03,2025
+# vcom -reportprogress 300 -93 -work work C:/Digital Lab/EE309_Pipelined_CPU/ring_buffer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ring_buffer
+# -- Compiling architecture rtl of ring_buffer
+# End time: 23:33:20 on May 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Digital Lab/EE309_Pipelined_CPU/d_ff.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:33:20 on May 03,2025
+# vcom -reportprogress 300 -93 -work work C:/Digital Lab/EE309_Pipelined_CPU/d_ff.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity d_ff
+# -- Compiling architecture beh of d_ff
+# End time: 23:33:20 on May 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Digital Lab/EE309_Pipelined_CPU/multiplier_16bit.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:33:21 on May 03,2025
+# vcom -reportprogress 300 -93 -work work C:/Digital Lab/EE309_Pipelined_CPU/multiplier_16bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mutiplier_16bit
+# -- Compiling architecture mul_arch of mutiplier_16bit
+# End time: 23:33:21 on May 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/Digital Lab/EE309_Pipelined_CPU/testbench.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:33:21 on May 03,2025
+# vcom -reportprogress 300 -93 -work work C:/Digital Lab/EE309_Pipelined_CPU/testbench.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity testbench
+# -- Compiling architecture sim of testbench
+# End time: 23:33:21 on May 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  testbench
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" testbench 
+# Start time: 23:33:21 on May 03,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench(sim)
+# Loading work.proc(rtl)
+# Loading work.stage1(sim)
+# Loading work.regfile(sim)
+# Loading work.ring_buffer(rtl)
+# Loading work.stage2(sim)
+# Loading work.mux2_1(dtf)
+# Loading work.regfile1(sim)
+# Loading work.mux4_1(dtf)
+# Loading work.sign_extend_16(dtf)
+# Loading work.stage3(sim)
+# Loading work.d_ff(beh)
+# Loading work.alu(beh)
+# Loading work.mutiplier_16bit(mul_arch)
+# Loading work.stage5(str)
+# Loading work.control(beh)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/processor/execute_block/ALUblock/inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/processor/execute_block/ALUblock/inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/processor/execute_block/ALUblock/inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/processor/decode_block/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/processor/decode_block/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/processor/decode_block/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2 ns  Iteration: 1  Instance: /testbench/processor/decode_block/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 2  Instance: /testbench/processor/execute_block/ALUblock/inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 3  Instance: /testbench/processor/decode_block/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 71 ns  Iteration: 6  Instance: /testbench/processor/decode_block/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 74 ns  Iteration: 1  Instance: /testbench/processor/decode_block/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 78 ns  Iteration: 2  Instance: /testbench/processor/execute_block/ALUblock/inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 86 ns  Iteration: 5  Instance: /testbench/processor/decode_block/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 90 ns  Iteration: 1  Instance: /testbench/processor/decode_block/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 90 ns  Iteration: 2  Instance: /testbench/processor/execute_block/ALUblock/inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 94 ns  Iteration: 1  Instance: /testbench/processor/decode_block/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 102 ns  Iteration: 2  Instance: /testbench/processor/execute_block/ALUblock/inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 110 ns  Iteration: 5  Instance: /testbench/processor/decode_block/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 122 ns  Iteration: 1  Instance: /testbench/processor/decode_block/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 126 ns  Iteration: 1  Instance: /testbench/processor/decode_block/reg_file
+# Break key hit
+# Simulation stop requested.
+# End time: 23:36:00 on May 03,2025, Elapsed time: 0:02:39
+# Errors: 1, Warnings: 19

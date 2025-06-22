@@ -1,0 +1,221 @@
+library ieee;
+use ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
+
+entity proc is
+	generic (
+		 -- 16 bit data
+		 REG_WIDTH : integer := 16;
+		 REG_ADD_WIDTH : integer := 3;
+		 INST_WIDTH: integer := 16
+	  );
+	port(
+	 clk : in std_logic;
+    rst : in std_logic;
+	 imem_rst : in std_logic;
+	 
+	 -- Read/Write to imem
+	 PC_en : in std_logic;
+	 rd_en_IMEM : in std_logic;
+	 wr_en_IMEM : in std_logic;
+	 wr_data_IMEM : in std_logic_vector(INST_WIDTH-1 downto 0);
+	 
+	 -- Output (not necessary)
+	 PC_out : out std_logic_vector(REG_WIDTH-1 downto 0);
+	 IR_out : out std_logic_vector(INST_WIDTH-1 downto 0);
+	 x_out, y_out, z_out, d3_out : out std_logic_vector(REG_WIDTH-1 downto 0);
+	 dest0_out, dest_out, a3_out : out std_logic_vector(REG_ADD_WIDTH-1 downto 0)
+	);
+end proc;
+
+architecture rtl of proc is
+	
+	---- 1. Fetch stage
+	component stage1 is
+		generic (
+    -- 16 bit data, 8 registers, 3 bit register addresses
+		INST_WIDTH : integer := 16;
+		REG_WIDTH : integer := 16
+	);
+	port (
+		clk, rst, imem_rst : in std_logic;
+		PC_en, WrEnI, RdEnI : in std_logic;
+		wr_data_IMEM : in std_logic_vector(INST_WIDTH-1 downto 0);
+		PC_out : out std_logic_vector(REG_WIDTH-1 downto 0);
+		IR : out std_logic_vector(INST_WIDTH-1 downto 0)
+	);
+	end component;
+
+	---- 2. Decode stage
+	component stage2 is
+		generic (
+		-- 16 bit data, 8 registers, 3 bit register addresses
+		INST_WIDTH : integer := 16;
+		REG_WIDTH : integer := 16;
+		REG_ADD_WIDTH : integer := 3;
+		OP_WIDTH : integer := 4
+		);
+		port(
+			clk, rst : in std_logic;
+			IR_in : in std_logic_vector(INST_WIDTH-1 downto 0);
+			d3_in : in std_logic_vector(REG_WIDTH-1 downto 0);
+			a3_in : in std_logic_vector(REG_ADD_WIDTH-1 downto 0);
+			regSel, RegWrEn : in std_logic;
+			dataSel : in std_logic_vector(1 downto 0);
+			opcode : out std_logic_vector(OP_WIDTH-1 downto 0);
+			x, y : out std_logic_vector(REG_WIDTH-1 downto 0);
+			dest : out std_logic_vector(REG_ADD_WIDTH-1 downto 0)
+		);
+	end component;
+
+
+	---- 3. Execute stage
+	component stage3 is
+		generic (
+		-- 16 bit data, 8 registers, 3 bit register addresses
+		INST_WIDTH : integer := 16;
+		REG_WIDTH : integer := 16;
+		REG_ADD_WIDTH : integer := 3;
+		OP_WIDTH : integer := 4
+	);
+	port(
+		clk, rst, WrEnD_in, RdEnD_in, zSel_in, RegWrEn_in : in std_logic;
+		x_in, y_in : in std_logic_vector(REG_WIDTH-1 downto 0);
+		dest_in : in std_logic_vector(REG_ADD_WIDTH -1 downto 0);
+		ALUFunc_in : in std_logic_vector(1 downto 0);
+		dest : out std_logic_vector(REG_ADD_WIDTH -1 downto 0);
+		z : out std_logic_vector(REG_WIDTH-1 downto 0);
+		RegWrEn : out std_logic
+	);
+	end component;
+	
+	---- 4. Writeback stage
+	component stage5 is
+		generic (
+			-- 16 bit data, 8 registers, 3 bit register addresses
+			REG_WIDTH : integer := 16;
+			REG_ADD_WIDTH : integer := 3
+		);
+		port(
+		clk, rst, RegWrEn_in : in std_logic;
+		z_in : in std_logic_vector(REG_WIDTH-1 downto 0);
+		dest_in : in std_logic_vector(REG_ADD_WIDTH-1 downto 0);
+		d3_in : out std_logic_vector(REG_WIDTH-1 downto 0);
+		a3_in : out std_logic_vector(REG_ADD_WIDTH-1 downto 0);
+		RegWrEn : out std_logic
+	);
+	end component;
+	
+	---- 5. Control Unit
+	component control is
+		port (
+			op : in std_logic_vector(3 downto 0);
+			ySel, ALUFunc : out std_logic_vector(1 downto 0);
+			xSel, WrEnD, RdEnD, zSel, RegWrEn: out std_logic
+		);
+	end component;
+	
+	signal PC : std_logic_vector(REG_WIDTH-1 downto 0);
+	signal IR : std_logic_vector(INST_WIDTH-1 downto 0);
+	
+	signal a3 : std_logic_vector(REG_ADD_WIDTH-1 downto 0);
+	signal d3 : std_logic_vector(REG_WIDTH-1 downto 0);
+	signal op : std_logic_vector(3 downto 0);
+	signal xSel : std_logic;
+	signal ySel : std_logic_vector(1 downto 0);
+	signal RegWrEn : std_logic;
+	signal x : std_logic_vector(REG_WIDTH-1 downto 0);
+	signal y : std_logic_vector(REG_WIDTH-1 downto 0);
+	signal dest0 : std_logic_vector(REG_ADD_WIDTH-1 downto 0);
+	signal ALUFunc : std_logic_vector(1 downto 0);
+	signal WrEnD : std_logic;
+	signal RdEnD : std_logic;
+	signal zSel : std_logic;
+	signal RegWrEn0 : std_logic;
+	
+	signal z : std_logic_vector(REG_WIDTH-1 downto 0);
+	signal dest : std_logic_vector(REG_ADD_WIDTH-1 downto 0);
+	signal RegWrEn1 : std_logic;
+	
+begin
+	
+	PC_out <= PC;
+	IR_out <= IR;
+	x_out <= x;
+	y_out <= y;
+	z_out <= z;
+	d3_out <= d3;
+	dest0_out <= dest0;
+	dest_out <= dest;
+	a3_out <= a3;
+	
+	fetch_block : stage1
+		port map(
+			clk=>clk,
+			rst=>rst,
+			imem_rst=>imem_rst,
+			PC_en=>PC_en,
+			WrEnI=>wr_en_IMEM,
+			RdEnI=>rd_en_IMEM,
+			wr_data_IMEM=>wr_data_IMEM,
+			PC_out=>PC,
+			IR=>IR
+		);
+		
+	decode_block : stage2
+		port map(
+			clk=>clk,
+			rst=>rst,
+			IR_in=>IR,
+			d3_in=>d3,
+			a3_in=>a3,
+			regSel=>xSel,
+			RegWrEn=>RegWrEn,
+			dataSel=>ySel,
+			opcode=>op,
+			x=>x,
+			y=>y,
+			dest=>dest0
+		);
+	
+	execute_block : stage3
+		port map(
+			clk=>clk,
+			rst=>rst,
+			x_in=>x,
+			y_in=>y,
+			dest_in=>dest0,
+			ALUFunc_in=>ALUFunc,
+			WrEnD_in=>WrEnD,
+			RdEnD_in=>RdEnD,
+			zSel_in=>zSel,
+			RegWrEn_in=>RegWrEn0,
+			z=>z,
+			dest=>dest,
+			RegWrEn=>RegWrEn1
+		);
+		
+	writeback_block : stage5
+		port map(
+			clk=>clk,
+			rst=>rst,
+			z_in=>z,
+			dest_in=>dest,
+			RegWrEn_in=>RegWrEn1,
+			d3_in=>d3,
+			a3_in=>a3,
+			RegWrEn=>RegWrEn
+		);
+	
+	control_block : control
+		port map(
+			op=>op,
+			xSel=>xSel,
+			ySel=>ySel,
+			ALUFunc=>ALUFunc,
+			WrEnD=>WrEnD,
+			RdEnD=>RdEnD,
+			zSel=>zSel,
+			RegWrEn=>RegWrEn0
+		);
+end architecture;

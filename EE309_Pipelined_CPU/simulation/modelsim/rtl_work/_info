@@ -1,0 +1,650 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Digital Lab/EE309_Pipelined_CPU/simulation/modelsim
+Ealu
+Z1 w1746295333
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8C:/Digital Lab/EE309_Pipelined_CPU/ALU.vhd
+Z6 FC:/Digital Lab/EE309_Pipelined_CPU/ALU.vhd
+l0
+L5
+VBNk?z;1?6fTT1M<]NcO5g1
+!s100 ?DazfdiHhW:zG7hJi66QD3
+Z7 OV;C;10.5b;63
+31
+Z8 !s110 1746295399
+!i10b 1
+Z9 !s108 1746295398.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Digital Lab/EE309_Pipelined_CPU/ALU.vhd|
+Z11 !s107 C:/Digital Lab/EE309_Pipelined_CPU/ALU.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Abeh
+R2
+R3
+R4
+DEx4 work 3 alu 0 22 BNk?z;1?6fTT1M<]NcO5g1
+l22
+L16
+VEYezR3@fRBN3l6;YY7X:K0
+!s100 :UNZ<R:7F_G@Ka>l:ZZkT1
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Econtrol
+Z14 w1746289725
+R3
+R4
+R0
+Z15 8C:/Digital Lab/EE309_Pipelined_CPU/control.vhd
+Z16 FC:/Digital Lab/EE309_Pipelined_CPU/control.vhd
+l0
+L4
+VdEo@kL37U=C`N=A^eFQDB1
+!s100 i1;f[<z6fd?XXA?dSlFB03
+R7
+31
+Z17 !s110 1746295400
+!i10b 1
+Z18 !s108 1746295399.000000
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/Digital Lab/EE309_Pipelined_CPU/control.vhd|
+Z20 !s107 C:/Digital Lab/EE309_Pipelined_CPU/control.vhd|
+!i113 1
+R12
+R13
+Abeh
+R3
+R4
+DEx4 work 7 control 0 22 dEo@kL37U=C`N=A^eFQDB1
+l13
+L12
+V^l7]L=7S1;7[>60W65de<0
+!s100 BO^Fc<a;h2z]fdOITaJXH0
+R7
+31
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
+Ed_ff
+Z21 w1746290303
+R3
+R4
+R0
+Z22 8C:/Digital Lab/EE309_Pipelined_CPU/d_ff.vhd
+Z23 FC:/Digital Lab/EE309_Pipelined_CPU/d_ff.vhd
+l0
+L4
+VL_68K99^j<J4OUTE38aHm0
+!s100 Xmof476L90cHPf?d4H]_a1
+R7
+31
+R17
+!i10b 1
+Z24 !s108 1746295400.000000
+Z25 !s90 -reportprogress|300|-93|-work|work|C:/Digital Lab/EE309_Pipelined_CPU/d_ff.vhd|
+Z26 !s107 C:/Digital Lab/EE309_Pipelined_CPU/d_ff.vhd|
+!i113 1
+R12
+R13
+Abeh
+R3
+R4
+DEx4 work 4 d_ff 0 22 L_68K99^j<J4OUTE38aHm0
+l14
+L13
+V89jOQF8UOiDIk85KG7m9`1
+!s100 ^W;M2FjRZOo?Q;nhY5Xco0
+R7
+31
+R17
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R12
+R13
+Emutiplier_16bit
+Z27 w1746295299
+R2
+R3
+R4
+R0
+Z28 8C:/Digital Lab/EE309_Pipelined_CPU/multiplier_16bit.vhd
+Z29 FC:/Digital Lab/EE309_Pipelined_CPU/multiplier_16bit.vhd
+l0
+L5
+VZgP]Rz=3Lkgle4A_`=LSh3
+!s100 geFUhhKLbWg:D[zk7MfPm1
+R7
+31
+Z30 !s110 1746295401
+!i10b 1
+Z31 !s108 1746295401.000000
+Z32 !s90 -reportprogress|300|-93|-work|work|C:/Digital Lab/EE309_Pipelined_CPU/multiplier_16bit.vhd|
+Z33 !s107 C:/Digital Lab/EE309_Pipelined_CPU/multiplier_16bit.vhd|
+!i113 1
+R12
+R13
+Amul_arch
+R2
+R3
+R4
+DEx4 work 15 mutiplier_16bit 0 22 ZgP]Rz=3Lkgle4A_`=LSh3
+l13
+L11
+VYNiS75>[NdgUnRg3?Pfzc1
+!s100 U<7ebJTC@QZH_8m8T^=F40
+R7
+31
+R30
+!i10b 1
+R31
+R32
+R33
+!i113 1
+R12
+R13
+Emux2_1
+Z34 w1746289834
+R3
+R4
+R0
+Z35 8C:/Digital Lab/EE309_Pipelined_CPU/mux2_1.vhd
+Z36 FC:/Digital Lab/EE309_Pipelined_CPU/mux2_1.vhd
+l0
+L4
+VzdH9CP<L3a6JgRhSg1E933
+!s100 XLRVGknV13gW8VCNGHmj43
+R7
+31
+R17
+!i10b 1
+R24
+Z37 !s90 -reportprogress|300|-93|-work|work|C:/Digital Lab/EE309_Pipelined_CPU/mux2_1.vhd|
+Z38 !s107 C:/Digital Lab/EE309_Pipelined_CPU/mux2_1.vhd|
+!i113 1
+R12
+R13
+Adtf
+R3
+R4
+DEx4 work 6 mux2_1 0 22 zdH9CP<L3a6JgRhSg1E933
+l16
+L15
+V1AeO7A<DaHWaDij]NUo5H3
+!s100 7`S12lghIAck;>`=R?_600
+R7
+31
+R17
+!i10b 1
+R24
+R37
+R38
+!i113 1
+R12
+R13
+Emux4_1
+Z39 w1746289854
+R3
+R4
+R0
+Z40 8C:/Digital Lab/EE309_Pipelined_CPU/mux4_1.vhd
+Z41 FC:/Digital Lab/EE309_Pipelined_CPU/mux4_1.vhd
+l0
+L4
+VCz<Z_NZU0dl]R8]ejD[:P1
+!s100 TJIhQCIBo:;d?REjADLB`1
+R7
+31
+R17
+!i10b 1
+R24
+Z42 !s90 -reportprogress|300|-93|-work|work|C:/Digital Lab/EE309_Pipelined_CPU/mux4_1.vhd|
+Z43 !s107 C:/Digital Lab/EE309_Pipelined_CPU/mux4_1.vhd|
+!i113 1
+R12
+R13
+Adtf
+R3
+R4
+DEx4 work 6 mux4_1 0 22 Cz<Z_NZU0dl]R8]ejD[:P1
+l16
+L15
+VKh3CnIL>URnC2Dn2c@2Wk0
+!s100 @XkdGjzFcD;F2;]YI`Az>3
+R7
+31
+R17
+!i10b 1
+R24
+R42
+R43
+!i113 1
+R12
+R13
+Eproc
+Z44 w1746294245
+R2
+R3
+R4
+R0
+Z45 8C:/Digital Lab/EE309_Pipelined_CPU/proc.vhd
+Z46 FC:/Digital Lab/EE309_Pipelined_CPU/proc.vhd
+l0
+L5
+V`>JKPD^GH_EeMRdP1Zo@U1
+!s100 ezOld2dXUGlJN7IaD?4S]1
+R7
+31
+R17
+!i10b 1
+R24
+Z47 !s90 -reportprogress|300|-93|-work|work|C:/Digital Lab/EE309_Pipelined_CPU/proc.vhd|
+Z48 !s107 C:/Digital Lab/EE309_Pipelined_CPU/proc.vhd|
+!i113 1
+R12
+R13
+Artl
+R2
+R3
+R4
+DEx4 work 4 proc 0 22 `>JKPD^GH_EeMRdP1Zo@U1
+l140
+L31
+VW9eR_Jc@^g<8KPOlQRTmg3
+!s100 Eo:?jmFWI;:4@KPJ0VOhP3
+R7
+31
+R17
+!i10b 1
+R24
+R47
+R48
+!i113 1
+R12
+R13
+Eregfile
+Z49 w1746290520
+R3
+R4
+R0
+Z50 8C:/Digital Lab/EE309_Pipelined_CPU/regfile.vhd
+Z51 FC:/Digital Lab/EE309_Pipelined_CPU/regfile.vhd
+l0
+L4
+V6jTfUej2h=bOVZjVHT:n82
+!s100 `=_oGTMDe=]5XDz<SEH<m2
+R7
+31
+R8
+!i10b 1
+R18
+Z52 !s90 -reportprogress|300|-93|-work|work|C:/Digital Lab/EE309_Pipelined_CPU/regfile.vhd|
+Z53 !s107 C:/Digital Lab/EE309_Pipelined_CPU/regfile.vhd|
+!i113 1
+R12
+R13
+Asim
+R3
+R4
+DEx4 work 7 regfile 0 22 6jTfUej2h=bOVZjVHT:n82
+l17
+L15
+VU;X^J^JL_=4mA20K`QB[W1
+!s100 cg=Te>8SJ;NfB4T2B_jXj2
+R7
+31
+R8
+!i10b 1
+R18
+R52
+R53
+!i113 1
+R12
+R13
+Eregfile1
+Z54 w1746289434
+R2
+R3
+R4
+R0
+Z55 8C:/Digital Lab/EE309_Pipelined_CPU/regfile1.vhd
+Z56 FC:/Digital Lab/EE309_Pipelined_CPU/regfile1.vhd
+l0
+L5
+Vl8@34MiQ]KT?g<PY<`oOC2
+!s100 >OaKJWB9QllS2??XUKz_j0
+R7
+31
+R8
+!i10b 1
+R18
+Z57 !s90 -reportprogress|300|-93|-work|work|C:/Digital Lab/EE309_Pipelined_CPU/regfile1.vhd|
+Z58 !s107 C:/Digital Lab/EE309_Pipelined_CPU/regfile1.vhd|
+!i113 1
+R12
+R13
+Asim
+R2
+R3
+R4
+DEx4 work 8 regfile1 0 22 l8@34MiQ]KT?g<PY<`oOC2
+l25
+L22
+VKboMHk56[EGd]3`aoMYbK2
+!s100 APblK<LUkfS8[?dU8>8KO3
+R7
+31
+R8
+!i10b 1
+R18
+R57
+R58
+!i113 1
+R12
+R13
+Ering_buffer
+Z59 w1746290280
+R3
+R4
+R0
+Z60 8C:/Digital Lab/EE309_Pipelined_CPU/ring_buffer.vhd
+Z61 FC:/Digital Lab/EE309_Pipelined_CPU/ring_buffer.vhd
+l0
+L4
+VGk5OjJn^Ff4]AogTn4OoL2
+!s100 OAN2`0K_;D9^J[:2ZRAz82
+R7
+31
+R17
+!i10b 1
+R24
+Z62 !s90 -reportprogress|300|-93|-work|work|C:/Digital Lab/EE309_Pipelined_CPU/ring_buffer.vhd|
+Z63 !s107 C:/Digital Lab/EE309_Pipelined_CPU/ring_buffer.vhd|
+!i113 1
+R12
+R13
+Artl
+R3
+R4
+DEx4 work 11 ring_buffer 0 22 Gk5OjJn^Ff4]AogTn4OoL2
+l58
+L34
+Vg=?e_WV<`W:k;^N`EWb4X1
+!s100 KW]FhbVfOh2R?nP89e^?g2
+R7
+31
+R17
+!i10b 1
+R24
+R62
+R63
+!i113 1
+R12
+R13
+Esign_extend_16
+Z64 w1746289896
+R2
+R3
+R4
+R0
+Z65 8C:/Digital Lab/EE309_Pipelined_CPU/sign_extend_16.vhd
+Z66 FC:/Digital Lab/EE309_Pipelined_CPU/sign_extend_16.vhd
+l0
+L5
+VQfLC9GKb8V8KhlG?h3=T80
+!s100 36=<QEddj=PQz<MR6=:Rb2
+R7
+31
+R17
+!i10b 1
+R24
+Z67 !s90 -reportprogress|300|-93|-work|work|C:/Digital Lab/EE309_Pipelined_CPU/sign_extend_16.vhd|
+Z68 !s107 C:/Digital Lab/EE309_Pipelined_CPU/sign_extend_16.vhd|
+!i113 1
+R12
+R13
+Adtf
+R2
+R3
+R4
+DEx4 work 14 sign_extend_16 0 22 QfLC9GKb8V8KhlG?h3=T80
+l16
+L15
+V2DZQA[2VSSKh2mcJWNSIZ2
+!s100 b3_A2<c56S@5Y>fY:^jgJ1
+R7
+31
+R17
+!i10b 1
+R24
+R67
+R68
+!i113 1
+R12
+R13
+Estage1
+Z69 w1746293649
+R2
+R3
+R4
+R0
+Z70 8C:/Digital Lab/EE309_Pipelined_CPU/stage1.vhd
+Z71 FC:/Digital Lab/EE309_Pipelined_CPU/stage1.vhd
+l0
+L5
+Vcj:=<o=N4G;lOGg4[nV[k2
+!s100 7OW7Jd<4A9jS94_@eco2P1
+R7
+31
+R8
+!i10b 1
+R18
+Z72 !s90 -reportprogress|300|-93|-work|work|C:/Digital Lab/EE309_Pipelined_CPU/stage1.vhd|
+Z73 !s107 C:/Digital Lab/EE309_Pipelined_CPU/stage1.vhd|
+!i113 1
+R12
+R13
+Asim
+R2
+R3
+R4
+DEx4 work 6 stage1 0 22 cj:=<o=N4G;lOGg4[nV[k2
+l63
+L19
+VQaK[]M_@Lh5F@3<3GMK^i3
+!s100 KPa039;kd1ZR_dKgFeSJc3
+R7
+31
+R8
+!i10b 1
+R18
+R72
+R73
+!i113 1
+R12
+R13
+Estage2
+Z74 w1746294065
+R2
+R3
+R4
+R0
+Z75 8C:/Digital Lab/EE309_Pipelined_CPU/stage2.vhd
+Z76 FC:/Digital Lab/EE309_Pipelined_CPU/stage2.vhd
+l0
+L5
+V?nWa2Q2N2HjfNIhYWDYg31
+!s100 i]a=8JBllKJVBJCg6]:1I2
+R7
+31
+R8
+!i10b 1
+R18
+Z77 !s90 -reportprogress|300|-93|-work|work|C:/Digital Lab/EE309_Pipelined_CPU/stage2.vhd|
+Z78 !s107 C:/Digital Lab/EE309_Pipelined_CPU/stage2.vhd|
+!i113 1
+R12
+R13
+Asim
+R2
+R3
+R4
+DEx4 work 6 stage2 0 22 ?nWa2Q2N2HjfNIhYWDYg31
+l93
+L26
+V`>C;OKb[3FhHeV6nClhdj3
+!s100 C:1:fXHHPjd0Lk8:GZDSQ3
+R7
+31
+R8
+!i10b 1
+R18
+R77
+R78
+!i113 1
+R12
+R13
+Estage3
+Z79 w1746294223
+R3
+R4
+R0
+Z80 8C:/Digital Lab/EE309_Pipelined_CPU/stage3.vhd
+Z81 FC:/Digital Lab/EE309_Pipelined_CPU/stage3.vhd
+l0
+L4
+VL2<872KWNbfQmZO6HE5Yc0
+!s100 WWSefhNfA]z;`d2aY:Te>0
+R7
+31
+R8
+!i10b 1
+R18
+Z82 !s90 -reportprogress|300|-93|-work|work|C:/Digital Lab/EE309_Pipelined_CPU/stage3.vhd|
+Z83 !s107 C:/Digital Lab/EE309_Pipelined_CPU/stage3.vhd|
+!i113 1
+R12
+R13
+Asim
+R3
+R4
+DEx4 work 6 stage3 0 22 L2<872KWNbfQmZO6HE5Yc0
+l100
+L23
+VIEf@f=;End3Fik>9nU_Md2
+!s100 N8iESLFnL_RH<8Z2WLmME0
+R7
+31
+R8
+!i10b 1
+R18
+R82
+R83
+!i113 1
+R12
+R13
+Estage5
+Z84 w1746293586
+R3
+R4
+R0
+Z85 8C:/Digital Lab/EE309_Pipelined_CPU/stage5.vhd
+Z86 FC:/Digital Lab/EE309_Pipelined_CPU/stage5.vhd
+l0
+L4
+V2T5QOYdHc6ioP?Vf[>3Rl1
+!s100 j=Q?K^:[Vz;[e;CAGb_XE2
+R7
+31
+R8
+!i10b 1
+R18
+Z87 !s90 -reportprogress|300|-93|-work|work|C:/Digital Lab/EE309_Pipelined_CPU/stage5.vhd|
+Z88 !s107 C:/Digital Lab/EE309_Pipelined_CPU/stage5.vhd|
+!i113 1
+R12
+R13
+Astr
+R3
+R4
+DEx4 work 6 stage5 0 22 2T5QOYdHc6ioP?Vf[>3Rl1
+l41
+L20
+V;OdI3XlYb`Jk=JI^RIZBC0
+!s100 [5Fj]hUAhHF?0V>5PinYR2
+R7
+31
+R8
+!i10b 1
+R18
+R87
+R88
+!i113 1
+R12
+R13
+Etestbench
+Z89 w1746291766
+R2
+R3
+R4
+R0
+Z90 8C:/Digital Lab/EE309_Pipelined_CPU/testbench.vhd
+Z91 FC:/Digital Lab/EE309_Pipelined_CPU/testbench.vhd
+l0
+L5
+V7DP;:5YPHBdconzKHM_?f3
+!s100 MTAB^bMb96MmMIUN@[1PY3
+R7
+31
+R30
+!i10b 1
+R31
+Z92 !s90 -reportprogress|300|-93|-work|work|C:/Digital Lab/EE309_Pipelined_CPU/testbench.vhd|
+Z93 !s107 C:/Digital Lab/EE309_Pipelined_CPU/testbench.vhd|
+!i113 1
+R12
+R13
+Asim
+R2
+R3
+R4
+DEx4 work 9 testbench 0 22 7DP;:5YPHBdconzKHM_?f3
+l49
+L8
+Vn6gTF@1aemP]9m;f4K?Oo2
+!s100 ]5iY5]K<a^BA7UEeDV:HG1
+R7
+31
+R30
+!i10b 1
+R31
+R92
+R93
+!i113 1
+R12
+R13

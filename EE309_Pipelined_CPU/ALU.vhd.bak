@@ -1,0 +1,66 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity ALU is
+port (alu_a,alu_b : in  std_logic_vector(15 downto 0);
+      alu_control : in std_logic_vector(1 downto 0);
+		alu_c : out std_logic_vector(15 downto 0));
+end entity;
+
+
+architecture alu_arch of ALU is
+signal alu_c1,alu_c2,alu_c3,alu_c4,alu_out : std_logic_vector(15 downto 0);
+signal carry : std_logic;
+
+------------------------------------------
+component adder_subtractor_16bit is
+port (a: in std_logic_vector(15 downto 0);
+      b: in std_logic_vector(15 downto 0);
+		m: in std_logic;
+		sum: out std_logic_vector(15 downto 0);
+		carry: out std_logic
+		);
+end component;
+
+component mutiplier_16bit is
+port (a,b : in  std_logic_vector(15 downto 0);
+		c : out std_logic_vector(15 downto 0));
+end component;
+
+component left_shift is
+    Port ( data_in, shift_in : in std_logic_vector(15 downto 0);	 
+           data_out : out std_logic_vector(15 downto 0));
+end component;
+
+component mux_16bits_41 is 
+ port( A,B,C,D: in std_logic_vector(15 downto 0);
+       S0, S1 : in std_logic; 
+		 Y      : out std_logic_vector(15 downto 0));
+end component;
+
+--------------------------------------------
+begin
+
+add_function: adder_subtractor_16bit port map(a=>alu_a, b=>alu_b, m=>'0',
+                                      sum=>alu_c1,carry=>carry);        --m=0 for add, m=1 for sub
+												  
+sub_function: adder_subtractor_16bit port map(a=>alu_a, b=>alu_b, m=>'1',
+                                      sum=>alu_c2,carry=>carry); 												  
+
+mul_function: mutiplier_16bit port map(a=>alu_a, b=>alu_b, c=> alu_c3 );
+
+shift_function: left_shift port map(data_in=>alu_a, shift_in=>alu_b, data_out=> alu_c4);												  
+
+mux: mux_16bits_41 port map(A=>alu_c1, B=>alu_c2, C=>alu_c3,D=>alu_c4,
+                      s1=>alu_control(1),s0=>alu_control(0),y=>alu_out);
+			  
+alu_c <= alu_out;			  
+
+-- add alu_control= 00
+-- sub alu_control= 01
+-- mul alu_control= 10
+-- shift alu_control = 11
+
+end architecture;
+
